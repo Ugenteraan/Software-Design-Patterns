@@ -20,6 +20,8 @@ The _Factory_ is an abstract class that has 2 public methods. In this example, t
 
 Whenever the client code requires a concrete class of the Car, the client does not need to know anything about the instantiation of the class. Instead, the Client communicates with the **CarFactory** class to get the object of the concrete class car.
 
+**NOTE THAT** : The client can also invoke the methods in every Car object as the client may get their information from the interface class. This does not violate any principle of this method.
+
 ### Why ?
 
 It is entirely possible for the solution to not use the Factory class and instead the client instantiate and call the concrete class of the required car directly. However, this also means that the client has to know the exact name of the concrete classes and the methods in it. This would result in hard-coding the logics in the client-side thus making the code hard to read or reuse when more concrete classes need to be added. By using the factory method, the logics and instantiations can be hidden from the client side thus making the code more organized and readable.
