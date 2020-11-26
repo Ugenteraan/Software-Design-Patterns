@@ -1,4 +1,4 @@
-# Factory Method
+# Strategy Method
 
 ### Brief explanation
 - **A.k.a.** Policy method.
