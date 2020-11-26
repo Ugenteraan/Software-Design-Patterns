@@ -2,10 +2,10 @@
 
 ### Brief explanation
 - The factory method separates the client code and the concrete classes.
-- The client should now have any knowledge about the instantiation of the concrete classes except the conventional names defined in the factory class itself.
+- The client should not have any knowledge about the instantiation of the concrete classes except the conventional names defined in the factory class itself.
 - The factory class/method will return ONLY the object of the required concrete class when required by the client code.
 - This separation enables the scaling of the classes to be more organized and hidden from the client codes as well as solving the problem of the client needing to know the exact name of the concrete classes and the need to create objects on-the-fly during runtime.
-- This method respects the **Open-Closed Principle** in software engineering which states that _Software engitites should be open for extension but closed for modification_.
+- This method respects the **Open-Closed Principle** in software engineering which states that _Software entities should be open for extension but closed for modification_.
 
 ### Example with Solution
 Say that a car manufacturing company currently manufactures 4 brands of cars. Toyota, Honda, Suzuki, and Nissan. Doors, tyres and car body has to be added for every car according to their brand. The cost of adding these parts depends on the brand. Using the factory method, the UML Class Diagram for this software might look like below.
