@@ -13,7 +13,7 @@ Say that you are the chief developer of an app that let a user to order foods/be
 
 The client only deals with a class called DiscountContext. The logics of all the discount calculations are completely hidden from the client side. During runtime, the client code specifies which algorithm to be used and DiscountContext will perform the discount calculation for the client using the desired algorithm. The interface class Discounts makes sure that all the discount calculation algorithms implements a method called "calculate_discount" to ensure that the DiscountContext class will be able to access them and get the desired output. The Context interface class makes sure that any Context class such as DiscountContext has some operation to perform and at the same time list all the available algorithm names. This will ensure the separation between client and the algorithm logics.
 
-### Why ?
+### Why?
 
 As a software grows larger, there might be newer algorithms needed to be implemented to cater a similar use-case. If we write the new algorithms in the same class or just as another method and use it at the client side, the code that handles algorithm invoking at client side will soon becomes very messy and hard to be maintained. The client side has to know the specifics of each algorithm in order to use it. If more than one developers are working on such a project, this will only cause miscommunications and delays. By encapsulating the algorithms on one side, standardizing them with the interface class and providing the context class for the client side code will make the whole process easier.
 
